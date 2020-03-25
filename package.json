@@ -1,0 +1,33 @@
+{
+  "name": "google-books-search",
+  "version": "1.0.0",
+  "description": "Google Books Search",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JShields30/google-books-search.git"
+  },
+  "author": "Joe Shields",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JShields30/google-books-search/issues"
+  },
+  "homepage": "https://github.com/JShields30/google-books-search#readme",
+  "devDependencies": {
+    "concurrently": "^5.1.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "if-env": "^1.0.4",
+    "moment": "^2.24.0",
+    "mongoose": "^5.9.6",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
+    "socket.io": "^2.3.0"
+  }
+}
