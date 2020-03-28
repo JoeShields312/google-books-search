@@ -7,10 +7,10 @@ const booksSchema = new Schema({
     required: true
   },
   authors: {
-    type: String,
+    type: Array,
     required: true
   },
-  googleId: {
+  id: {
     type: String || Number,
     required: true
   },
@@ -18,22 +18,22 @@ const booksSchema = new Schema({
     type: String
   },
   image: {
-    type: Image || String
+    type: String
   },
   link: {
-    type: URL || String
+    type: String
   },
-  date: {
+  publishedDate: {
     type: Date,
     default: Date.now
   }
 });
 booksSchema.index({
-    googleId: 1,
+    id: 1,
 }, {
     unique: true
 }); 
 
-const Books = mongoose.model("Books", bookSchema);
+const Books = mongoose.model("Books", booksSchema);
 
 module.exports = Books;
