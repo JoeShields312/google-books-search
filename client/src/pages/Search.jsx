@@ -24,11 +24,15 @@ const Search = () => {
   let saveHandler=(result)=>{
     console.log(result)
     //pack up data
-    const data = {id: result.id, image: result.volumeInfo.imageLinks.thumbnail, title: result.volumeInfo.title, authors: result.volumeInfo.authors, publishedDate: result.volumeInfo.publishedDate, descripition: result.volumeInfo.description }
+    const data = {id: result.id, image: result.volumeInfo.imageLinks.thumbnail, title: result.volumeInfo.title, authors: result.volumeInfo.authors, publishedDate: result.volumeInfo.publishedDate, description: result.volumeInfo.description, link: result.volumeInfo.infoLink }
     console.log(data)
     //make api call
     axios.post("/api/books", data).then(x => console.log(x))
   }
+  let viewHandler = url => {
+
+    console.log(url)
+    window.open(url)}
   return (
     <Container fluid>
       <div className="searchbox text-center px-auto mx-auto">
@@ -63,6 +67,11 @@ const Search = () => {
                       <li className="list-group-item my-2 mx-5 px-5">
                         {result.volumeInfo.description}
                       </li>
+                      <button className="btn btn-info btn-lg mx-5 my-1 px-5"
+                      type="btn btn-md"
+                      label="view"
+                      onClick={() => viewHandler(result.volumeInfo.infoLink)}
+                      >View</button>
                       <button
                         className="btn btn-info btn-lg mx-5 my-1 px-5"
                         type="btn btn-md"

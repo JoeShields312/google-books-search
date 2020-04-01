@@ -20,11 +20,12 @@ class Saved extends Component {
   }
   getSavedBooks = () => {
     Api.getSavedBooks()
-      .then(res =>
+      .then(res => {
+        console.log(res.data)
         this.setState({
           books: res.data
         })
-      )
+      })
       .catch(err => console.log(err));
   };
   render() {
@@ -44,6 +45,8 @@ class Saved extends Component {
                       authors={book.authors.join(", ")}
                       description={book.description}
                       image={book.image}
+                      link={book.link}
+                      _id={book._id}
                     />
                   ))}
                 </List>
