@@ -20,6 +20,15 @@ const Search = () => {
         });
     }
   }, [searchterm]);
+
+  let saveHandler=(result)=>{
+    console.log(result)
+    //pack up data
+    const data = {id: result.id, image: result.volumeInfo.imageLinks.thumbnail, title: result.volumeInfo.title, authors: result.volumeInfo.authors, publishedDate: result.volumeInfo.publishedDate, descripition: result.volumeInfo.description }
+    console.log(data)
+    //make api call
+    axios.post("/api/books", data).then(x => console.log(x))
+  }
   return (
     <Container fluid>
       <div className="searchbox text-center px-auto mx-auto">
@@ -41,6 +50,7 @@ const Search = () => {
               return (
                 <React.Fragment key={index}>
                     <ul className="list-group px-auto mx-auto">
+                    <li className="list-group-item my-2 mx-5 px-5">{result.volumeInfo.imageLinks ?<img src={result.volumeInfo.imageLinks.thumbnail} />:""}</li>
                       <li className="list-group-item my-2 mx-5 px-5">
                         {result.volumeInfo.title}
                       </li>
@@ -57,8 +67,8 @@ const Search = () => {
                         className="btn btn-info btn-lg mx-5 my-1 px-5"
                         type="btn btn-md"
                         label="search"
-                        // book={this.state.books5
-                        // onClick={() => this.handleSaveBook(book)}
+                        // book={this.state.books
+                         onClick={() => saveHandler(result)}
                       >
                         <strong>Save</strong>
                       </button>

@@ -9,10 +9,11 @@ module.exports = {
         .catch(err => res.status(422).json(err));
     },
     create: function(req, res) {
+        console.log("BOOKS CONTROLLER", req.body)
         db.Books
         .create(req.body)
-        .then(dbModel => res.json(dbModel))
-        .catch(err => res.status(422).json(err));
+        .then(dbModel => res.json(dbModel));
+        // .catch(err => res.status(422).json(err));
     },
     remove: function(req, res) {
         db.Books
