@@ -1,10 +1,9 @@
-.searchbox {
-    border: 1px solid white !important;
-} 
-/* .searchpage {
-    border: 1px solid white !important;
+.gsearch {
+    display: inline-flex;
+}
+/* .searchbar {
+    position: inherit !important;
 } */
-/* .btn {
-    margin-right: 275px !important;
-    margin-left: 275px !important;
-} */
+.searchtext {
+    display: inline-grid !important;
+}

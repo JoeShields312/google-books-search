@@ -19,6 +19,7 @@ const Search = () => {
           console.log(results);
         });
     }
+    // eslint-disable-next-line
   }, [searchterm]);
 
   let saveHandler=(result)=>{
@@ -36,44 +37,52 @@ const Search = () => {
   return (
     <Container fluid>
       <div className="searchbox text-center px-auto mx-auto">
-        <h1 className="text-white text-center">SEARCH PAGE</h1>
+        <div className="searchtext">
+        <h1 className="gsearch mx-auto">
+          <p><span style={{color: "#4285F4"}}>S</span></p>
+          <p><span style={{color: "#DB4437"}}>E</span></p>
+          <p><span style={{color: "#F4B400"}}>A</span></p>
+          <p><span style={{color: "#0F9D58"}}>R</span></p>
+          <p><span style={{color: "#4285F4"}}>C</span></p>
+          <p><span style={{color: "#DB4437"}}>H</span></p>
+        </h1>
         <input
-          className="searchbox text-center md-10 sm-10"
+          className="searchbar text-center md-10 sm-10"
           type="text"
-          placeholder="Search Books"
+          placeholder="Search Google Books"
           value={searchterm}
           onChange={event => {
             console.log(event.target.value);
             setSearchTerm(event.target.value);
           }}
         />
-           <br />
+        </div>
            <br />
         {results.length
           ? results.map((result, index) => {
               return (
                 <React.Fragment key={index}>
-                    <ul className="list-group px-auto mx-auto">
-                    <li className="list-group-item my-2 mx-5 px-5">{result.volumeInfo.imageLinks ?<img src={result.volumeInfo.imageLinks.thumbnail} />:""}</li>
-                      <li className="list-group-item my-2 mx-5 px-5">
+                    <div className="px-auto mx-auto text-white">
+                    <div className="my-2 mx-5 px-5">{result.volumeInfo.imageLinks ?<img src={result.volumeInfo.imageLinks.thumbnail} alt="" />:""}</div>
+                      <div className="my-2 mx-5 px-5">
                         {result.volumeInfo.title}
-                      </li>
-                      <li className="list-group-item my-2 mx-5 px-5">
+                      </div>
+                      <div className="my-2 mx-5 px-5">
                         {result.volumeInfo.authors}
-                      </li>
-                      <li className="list-group-item my-2 mx-5 px-5">
+                      </div>
+                      <div className="my-2 mx-5 px-5">
                         {result.volumeInfo.publishedDate}
-                      </li>
-                      <li className="list-group-item my-2 mx-5 px-5">
+                      </div>
+                      <div className="my-2 mx-5 px-5">
                         {result.volumeInfo.description}
-                      </li>
-                      <button className="btn btn-info btn-lg mx-5 my-1 px-5"
+                      </div>
+                      <button className="btn btn-info btn-sm mx-5 my-1 px-5"
                       type="btn btn-md"
                       label="view"
                       onClick={() => viewHandler(result.volumeInfo.infoLink)}
                       >View</button>
                       <button
-                        className="btn btn-info btn-lg mx-5 my-1 px-5"
+                        className="btn btn-info btn-sm mx-5 my-1 px-5"
                         type="btn btn-md"
                         label="search"
                         // book={this.state.books
@@ -81,8 +90,7 @@ const Search = () => {
                       >
                         <strong>Save</strong>
                       </button>
-                    </ul>
-                    <br />
+                    </div>
                     <br />
                 </React.Fragment>
               );

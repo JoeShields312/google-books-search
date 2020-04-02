@@ -1,9 +1,9 @@
 import Container from "../components/Container/Container.jsx";
-import Jumbotron from "../components/Jumbotron/Jumbotron.jsx";
-import Footer from "../components/Footer/Footer.jsx";
+// import Jumbotron from "../components/Jumbotron/Jumbotron.jsx";
+// import Footer from "../components/Footer/Footer.jsx";
 // import Navbar from "../components/Navbar/Navbar.jsx";
-import React, { useState, useEffect, Component } from "react";
-import axios from "axios";
+import React, { Component } from "react";
+// import axios from "axios";
 import { List } from "../components/List";
 import Book from "../components/Book/Book.jsx";
 import "../App.css";
@@ -45,7 +45,7 @@ class Saved extends Component {
                       authors={book.authors.join(", ")}
                       description={book.description}
                       image={book.image}
-                      link={book.link}
+                      // link={book.link}
                       _id={book._id}
                     />
                   ))}
