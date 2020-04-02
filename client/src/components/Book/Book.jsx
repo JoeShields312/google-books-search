@@ -1,8 +1,6 @@
 import React from "react";
 import Api from "../../utils/Api";
 
-
-
 function Book({
 
   _id,
