@@ -28,5 +28,5 @@ mongoose.connect(MONGODB_URI || "mongodb://localhost/google-books-search", {
 });
 // Start the API server
 app.listen(PORT, function() {
-  console.log(`🌎  ==> API Server now listening on PORT http://localhost:${PORT}!`);
+  console.log(`🌎  ==> API Server now listening on PORT http://localhost:${PORT}`);
 });
