@@ -8,7 +8,6 @@ import { List } from "../components/List";
 import Book from "../components/Book/Book.jsx";
 import "../App.css";
 import Api from "../utils/Api.js";
-// const key = "AIzaSyCJsckSxIQ8Ry42DxSvgFEeNp26mXtVDw8";
 
 
 class Saved extends Component {
