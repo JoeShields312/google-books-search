@@ -28,6 +28,7 @@ class Saved extends Component {
       })
       .catch(err => console.log(err));
   };
+
   render() {
     return (
       <Container className="col-md-8">

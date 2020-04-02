@@ -28,7 +28,9 @@ const Search = () => {
     const data = {id: result.id, image: result.volumeInfo.imageLinks.thumbnail, title: result.volumeInfo.title, authors: result.volumeInfo.authors, publishedDate: result.volumeInfo.publishedDate, description: result.volumeInfo.description, link: result.volumeInfo.infoLink }
     console.log(data)
     //make api call
-    axios.post("/api/books", data).then(x => console.log(x))
+    axios.post("/api/books", data)
+      .then(x => console.log(x))
+      .then(() => alert(`${result.volumeInfo.title} saved`))
   }
   let viewHandler = url => {
 
