@@ -1,6 +1,5 @@
 import Container from "../components/Container/Container.jsx";
 import React, { useState, useEffect } from "react";
-// import axios from "axios";
 import Api from "../utils/Api.js";
 import "../App.css";
 
