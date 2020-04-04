@@ -1,6 +1,6 @@
 const router = require("./node_modules/express").Router();
 const booksController = require("../../controller/booksController");
-// Matches with "/api/books"
+// Matches with "/Api/books"
 router.route("/")
   .get(booksController.findAll)
   .post(booksController.create);
