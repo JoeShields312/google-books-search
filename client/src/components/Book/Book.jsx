@@ -19,6 +19,7 @@ function Book({
     window.open(url);
   };
   const deleteHandler = _id => {
+    console.log(_id)
     Api.deleteBook(_id)
       .then(() => alert('book deleted'))
       .then(_ => window.location.reload());

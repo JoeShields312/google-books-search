@@ -1,9 +1,5 @@
 import Container from "../components/Container/Container.jsx";
-// import Jumbotron from "../components/Jumbotron/Jumbotron.jsx";
-// import Footer from "../components/Footer/Footer.jsx";
-// import Navbar from "../components/Navbar/Navbar.jsx";
 import React, { Component } from "react";
-// import axios from "axios";
 import { List } from "../components/List";
 import Book from "../components/Book/Book.jsx";
 import "../App.css";
@@ -27,7 +23,6 @@ class Saved extends Component {
       })
       .catch(err => console.log(err));
   };
-
   render() {
     return (
       <Container className="col-md-8">
@@ -45,7 +40,6 @@ class Saved extends Component {
                       authors={book.authors.join(", ")}
                       description={book.description}
                       image={book.image}
-                      // link={book.link}
                       _id={book._id}
                     />
                   ))}
@@ -62,66 +56,3 @@ class Saved extends Component {
   }
 }
 export default Saved;
-// import Container from "../components/Container/Container.jsx";
-// // import Jumbotron from "../components/Jumbotron/Jumbotron.jsx";
-// // import Footer from "../components/Footer/Footer.jsx";
-// // import Navbar from "../components/Navbar/Navbar.jsx";
-// import React, { useState, useEffect } from "react";
-// // import axios from "axios";
-// import { List } from "../components/List";
-// import Book from "../components/Book/Book.jsx";
-// import "../App.css";
-// import Api from "../utils/Api.js";
-
-
-// const Saved = () => {
-//   // const [results, setResults] = useState([]);
-//   // const [bookSaved, setBookSaved] = useState("");
-//   const [books, setBooks] = useState([]);
-// useEffect(() => {
-//   getSavedBooks()
-// }, [])
-//  const getSavedBooks = () => {
-//     Api.getSavedBooks()
-//       .then(res => {
-//         console.log(res.data)
-//         setBooks({
-//           books: res.data
-//         })
-//       })
-//       .catch(err => console.log(err));
-//   };
-
-
-//     return (
-//       <Container className="col-md-8">
-//         <div>
-//           <div size="md-12">
-//             <div title="Saved Books" icon="download">
-//               {books.length ? (
-//                 <List>
-//                   {books.map(book => (
-//                     <Book 
-//                       key={book._id}
-//                       title={book.title}
-//                       subtitle={book.subtitle}
-//                       link={book.link}
-//                       authors={book.authors.join(", ")}
-//                       description={book.description}
-//                       image={book.image}
-//                       // link={book.link}
-//                       _id={book._id}
-//                     />
-//                   ))}
-//                 </List>
-//               ) : (
-//                 <h2 className="text-center">No Saved Books</h2>
-//               )}
-//             </div>
-//           </div>
-//         </div>
-
-//       </Container>
-//     );
-  
-// }
