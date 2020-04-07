@@ -10,7 +10,7 @@
 -Added Polyfill for backwards compatability 
 
 ## Video of site until link is fixed
-![](GoogBookGif.gif)
+![](https://github.com/JShields30/google-books-search/blob/master/client/src/images/GoogleBookGif.gif?raw=true.gif)
 
 ## Heroku Link 
 https://thawing-forest-54236.herokuapp.com/
