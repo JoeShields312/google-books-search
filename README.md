@@ -10,8 +10,7 @@
 -Added Polyfill for backwards compatability 
 
 ## Video of site until link is fixed
-<iframe src="https://drive.google.com/file/d/1S-6BNb6vREc-Zn_TuSfj5oXg0imRo8Zw/preview" width="640" height="480"></iframe>
-
+![](GoogBookGif.gif)
 
 ## Heroku Link 
 https://thawing-forest-54236.herokuapp.com/
