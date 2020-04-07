@@ -1,5 +1,5 @@
 # Google-Book-Search
--This program is a React-based Google Books Search app. It allows the user to be able to search for any book, as well as save a book or view a book to purchase on Google bookstore.
+-This program is a React-based Google Books Search app, it allows the user the ability to search for any book or author, as well as save a book or view a book on Google Books website.
 
 -Google Books API returns URL's for book image, title, Author, Date Published, and a book description. 
 
